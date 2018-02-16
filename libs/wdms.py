@@ -17,7 +17,9 @@ class WDMS():
 		r = self.s.post(url,json = payload)
 		return r.json()
 	
-	'''zone'''
+	"""
+	zone
+	"""
 	#create zone;post,json
 	def create_zone(self,index,name):
 		url = r'http://127.0.0.1:8081/api/zones'
@@ -32,9 +34,14 @@ class WDMS():
 		r = self.s.get(url)
 		return r.json()
 	
-	'''department'''
-	#create department
+	"""
+	department
+	"""
+
 	def create_department(self,code,name,zone_num):
+		"""
+		create department
+		"""
 		url = r'http://127.0.0.1:8081/api/departments?zoneNumber=1'
 		payload = {'Data':[{'departmentCode':code,'departmentName':name,'zoneNumber':zone_num}]}
 		r = self.s.post(url,json = payload)
@@ -66,4 +73,3 @@ class WDMS():
 		,'masterDevice':'Yes','facialDevice':'No'}
 		r = self.s.post(url,json = payload)
 		return r.json()
-

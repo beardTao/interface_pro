@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>test report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-01-31 22:38:07</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:01.908474</p>
-<p class='attribute'><strong>Status:</strong> Pass 13 Failure 2</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-02-15 16:31:27</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:05.340000</p>
+<p class='attribute'><strong>Status:</strong> Pass 11 Failure 4</p>
 
 <p class='description'>details</p>
 </div>
@@ -238,15 +238,48 @@ function showOutput(id, name) {
 <tr class='failClass'>
     <td>test_department.deparements</td>
     <td>7</td>
-    <td>5</td>
-    <td>2</td>
+    <td>4</td>
+    <td>3</td>
     <td>0</td>
     <td><a href="javascript:showClassDetail('c2',7)">Detail</a></td>
 </tr>
 
-<tr id='pt2.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_create_department1: 在不存在的区域下创建部门</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft2.1' class='none'>
+    <td class='failCase'><div class='testcase'>test_create_department1: 在不存在的区域下创建部门</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft2.1')" >
+        fail</a>
+
+    <div id='div_ft2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft2.1: Traceback (most recent call last):
+  File "E:\interface_pro\test_case\test_department.py", line 15, in test_create_department1
+    self.assertEqual(r['message'],"Zone Doesn't Exist")
+AssertionError: 'Succeed' != "Zone Doesn't Exist"
+- Succeed
++ Zone Doesn't Exist
+
+Traceback (most recent call last):
+  File "E:\interface_pro\test_case\test_department.py", line 15, in test_create_department1
+    self.assertEqual(r['message'],"Zone Doesn't Exist")
+AssertionError: 'Succeed' != "Zone Doesn't Exist"
+- Succeed
++ Zone Doesn't Exist
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='pt2.2' class='hiddenRow'>
@@ -270,11 +303,11 @@ function showOutput(id, name) {
         <pre>
         
 ft2.3: Traceback (most recent call last):
-  File "G:\interface\project\WDMS\test_case\test_department.py", line 63, in test_delete_departments
+  File "E:\interface_pro\test_case\test_department.py", line 63, in test_delete_departments
     self.assertEqual(r['code'],200)
 AssertionError: 3008 != 200
 Traceback (most recent call last):
-  File "G:\interface\project\WDMS\test_case\test_department.py", line 63, in test_delete_departments
+  File "E:\interface_pro\test_case\test_department.py", line 63, in test_delete_departments
     self.assertEqual(r['code'],200)
 AssertionError: 3008 != 200
 
@@ -302,11 +335,11 @@ AssertionError: 3008 != 200
         <pre>
         
 ft2.4: Traceback (most recent call last):
-  File "G:\interface\project\WDMS\test_case\test_department.py", line 31, in test_get_all_department_info
+  File "E:\interface_pro\test_case\test_department.py", line 31, in test_get_all_department_info
     self.assertEqual(r['code'],200)
 AssertionError: 3006 != 200
 Traceback (most recent call last):
-  File "G:\interface\project\WDMS\test_case\test_department.py", line 31, in test_get_all_department_info
+  File "E:\interface_pro\test_case\test_department.py", line 31, in test_get_all_department_info
     self.assertEqual(r['code'],200)
 AssertionError: 3006 != 200
 
@@ -371,11 +404,11 @@ AssertionError: 3006 != 200
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr class='passClass'>
+<tr class='failClass'>
     <td>test_zone.zones</td>
     <td>3</td>
-    <td>3</td>
-    <td>0</td>
+    <td>2</td>
+    <td>1</td>
     <td>0</td>
     <td><a href="javascript:showClassDetail('c5',3)">Detail</a></td>
 </tr>
@@ -390,16 +423,43 @@ AssertionError: 3006 != 200
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt5.3' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test3_zone_info: 获取区域信息</div></td>
-    <td colspan='5' align='center'>pass</td>
+<tr id='ft5.3' class='none'>
+    <td class='failCase'><div class='testcase'>test3_zone_info: 获取区域信息</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.3')" >
+        fail</a>
+
+    <div id='div_ft5.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.3: Traceback (most recent call last):
+  File "E:\interface_pro\test_case\test_zone.py", line 35, in test3_zone_info
+    self.assertEqual(result_zoneNum,122)
+AssertionError: 1 != 122
+Traceback (most recent call last):
+  File "E:\interface_pro\test_case\test_zone.py", line 35, in test3_zone_info
+    self.assertEqual(result_zoneNum,122)
+AssertionError: 1 != 122
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
     <td>15</td>
-    <td>13</td>
-    <td>2</td>
+    <td>11</td>
+    <td>4</td>
     <td>0</td>
     <td>&nbsp;</td>
 </tr>
