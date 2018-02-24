@@ -2,7 +2,7 @@ from libs.wdms import WDMS
 import requests
 import unittest
 # import json
-class deparements(unittest.TestCase):
+class Department(unittest.TestCase):
 	def setUp(self):
 		s = requests.session()
 		self.WDMS = WDMS(s)
@@ -24,7 +24,7 @@ class deparements(unittest.TestCase):
 		self.assertEqual(r['code'],200)
 
 	#get the infomation of departments
-	def test_get_all_department_info(self):
+	def test_get_all_departments_info(self):
 		'''获取所有部门信息'''
 		self.WDMS.login('admin','admin')
 		r = self.WDMS.get_department_info()

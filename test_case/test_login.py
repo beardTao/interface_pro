@@ -1,13 +1,13 @@
 import unittest
 import requests
 from libs.wdms import WDMS
-class Test_login(unittest.TestCase):
+class Login(unittest.TestCase):
 	def setUp(self):
 		s = requests.session()
 		self.WDMS = WDMS(s)
 	
 	def test_login_successful(self):
-		'''账号正确，登录成功'''
+		'''账号密码正确，登录成功'''
 		r = self.WDMS.login('admin','admin')
 		self.assertEqual(r['message'],'Login Successful')
 		self.assertEqual(r['code'],200)

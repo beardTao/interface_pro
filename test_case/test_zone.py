@@ -2,7 +2,7 @@ from libs.wdms import WDMS
 import requests
 import unittest
 # import json
-class zones(unittest.TestCase):
+class Zone(unittest.TestCase):
 	def setUp(self):
 		s = requests.session()
 		self.WDMS = WDMS(s)
