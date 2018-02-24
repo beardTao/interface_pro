@@ -6,16 +6,16 @@ class Zone(unittest.TestCase):
 	def setUp(self):
 		s = requests.session()
 		self.WDMS = WDMS(s)
-	#create zone
 	
+	#create zone
 	def test1_create_zone(self):
 		'''创建区域'''
 		self.WDMS.login('admin','admin')
 		r = self.WDMS.create_zone(122,'test')
 		self.assertEqual(r['message'],'Succeed')
 		self.assertEqual(r['code'],200)
-	#update zone
 	
+	#update zone	
 	def test2_update_zone(self):
 		'''更新区域名称'''
 		self.WDMS.login('admin','admin')
